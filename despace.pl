@@ -1,7 +1,9 @@
 #!/usr/bin/perl
+# use '5.10.0' ;
 
-while (<>) {
-  print  if /^=/ ;
+foreach my $filename (@ARGV) {
+  
+  print "Rename $filename \n" ;
 }
 
 
