@@ -2,8 +2,10 @@
 # use '5.10.0' ;
 
 foreach my $filename (@ARGV) {
-  
-  print "Rename $filename \n" ;
+  my $newfilename = $filename ;
+  $newfilename =~ s/ \s+ /_/gx ;
+  print "Rename $filename as  $newfilename\n" ;
+  rename $filename , $newfilename or die "Cannot rename file: $!";
 }
 
 
