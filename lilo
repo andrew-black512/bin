@@ -1,4 +1,5 @@
 #!/bin/sh
-me=`basename $0`
-lilypond "$@"
-gnome-open $1.pdf
+file=`basename $1 .ly`
+echo $file
+lilypond -o pdf/$file "$@"
+gnome-open pdf/$file.pdf
