@@ -1,4 +1,4 @@
 #!/bin/sh
 me=`basename $0`
-export LD_LIBRARY_PATH="/home/andrew/lilypond/usr/lib"
-exec "/home/andrew/lilypond/usr/bin/$me" "$@"
+lilypond "$@"
+gnome-open $1.pdf
