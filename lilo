@@ -1,0 +1,4 @@
+#!/bin/sh
+me=`basename $0`
+lilypond "$@"
+gnome-open $1.pdf
