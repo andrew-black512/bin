@@ -1,0 +1,11 @@
+SUB=$1   # eg work/cbt (assume ~/ )
+DRIVE=seagate2019  # or 9A55-2041
+DEST=$(dirname /media/andrew/$DRIVE/tallisbu/$SUB)
+#mkdir -p $DEST
+rsync ~/$SUB  $DEST  -va
+tree -d -n $DEST
+
+# TODO tree should include the leafname.  Maybe DEST and DEST_DIR
+# TODO exclude PDFs (but want them if downloaded)
+# TODO delete fdeleted files
+
