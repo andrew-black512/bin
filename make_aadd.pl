@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w 
+#!/usr/bin/perl -w
 
 =head1 NAME
 
@@ -10,12 +10,35 @@
 
 =head1 TO DO
 
+[ul type="disc"][li]Get list of music for concert and put in order.[/li][li]Practice VW[/li][li]Practice Elgar
+
+[/li][li]Clean one side of kitchen properly (bin/recycle crap)
+[/li][li]Unpack food[/li][li]Get something ready for dinner[/li][li]Pay bill[/li][/ul][i]
+
+[/i]
+
+[b]Dont do list[/b]
+[i]Really easy to find slightly more interesting deflection activities....,[/i]
+
+[ul type="disc"][li]mending clothes. Can wait[/li][li]cycle routes[/li][/ul]
+
+
 =cut
 
 use strict ;
 use warnings ;
-use feature ":5.10" ;   
+use feature ":5.10" ;
 use Data::Dumper ;
+
+sub box {
+    my $code = shift ;
+    my $text = shift ;
+    return "[$code]$text\[/$code]" ;
+}
+#------------------------------------
+
+say box( 'i', 'some text' ) ;
+
 
 
 
