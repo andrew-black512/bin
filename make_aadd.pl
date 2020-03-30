@@ -10,6 +10,7 @@
 
 =head1 TO DO
 
+=head1 SAMPLE OUTPUT
 [ul type="disc"][li]Get list of music for concert and put in order.[/li][li]Practice VW[/li][li]Practice Elgar
 
 [/li][li]Clean one side of kitchen properly (bin/recycle crap)
@@ -36,9 +37,22 @@ sub box {
     return "[$code]$text\[/$code]" ;
 }
 #------------------------------------
+sub start_list {
+    say '[ul type="disc"]'
+}
+sub end_list {
+    say '[/ul]'
+}
+#------------------------------------
+start_list() ;
+while (<>) {
+	chomp ;
+	my $text = $_ ;
 
-say box( 'i', 'some text' ) ;
-
+	$text = box( 's', $text ) if $text =~ s/\#d// ;
+    say '  ' . box( 'li', $text ) ;
+}
+end_list() ;
 
 
 
