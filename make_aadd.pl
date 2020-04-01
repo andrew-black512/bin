@@ -48,8 +48,9 @@ start_list() ;
 while (<>) {
 	chomp ;
 	my $text = $_ ;
-
-	$text = box( 's', $text ) if $text =~ s/\#d// ;
+    if ( $text =~ s/\#d// ) {
+	   $text = box( 's', $text ) ;
+	}
     say '  ' . box( 'li', $text ) ;
 }
 end_list() ;
