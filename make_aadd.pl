@@ -49,9 +49,15 @@ while (<>) {
 	chomp ;
 	my $text = $_ ;
     if ( $text =~ s/\#d// ) {
-	   $text = box( 's', $text ) ;
+	   $text = box( 's', $text ) ;  #subscript
 	}
-    say '  ' . box( 'li', $text ) ;
+
+    if ( $text =~ s/^\s+// ) {
+	   $text = box( 'i', $text ) ;
+	   say $text ;
+	} else {
+        say '  ' . box( 'li', $text ) ;
+    }
 }
 end_list() ;
 
