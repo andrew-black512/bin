@@ -4,4 +4,6 @@ line 1
 line 2
 done item #d
 ## dont do
+ignore blank line following
+
 EOF
