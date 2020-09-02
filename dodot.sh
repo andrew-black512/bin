@@ -1,3 +1,4 @@
+#TODO - only use out dir if it exists
 ##   perl station2dot.pl LBG_PUR > out/L.do
 
 FILEBASE=$1
