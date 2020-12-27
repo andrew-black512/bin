@@ -7,3 +7,4 @@ alias gitcl='git clean -n'
 
 # list ignored files. Otere ways of doing this
 alias gitig='git status --short --ignored'
+
