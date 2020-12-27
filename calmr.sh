@@ -8,6 +8,7 @@ echo Continue,
 echo Agree x 2
 echo then yes.
 sleep .5
-firefox -new-window https://www.thecalmzone.net/help/webchat/
-g calmc
-bash
+firefox -new-window https://www.thecalmzone.net/help/webchat/ &
+
+# g calmc - TODO alias issue
+# bash
