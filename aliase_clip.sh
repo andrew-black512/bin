@@ -1,3 +1,4 @@
 echo bash alias with cdd + extras + up + mvs xclip mustools
-    alias xclipc='xclip -i -selection clipboard'
-    alias xclipco='xclip -o -selection clipboard'
+#  pipe | clip or clip >file>
+    alias clip='xclip -i -selection clipboard'
+    alias clips='xclip -o -selection clipboard'
