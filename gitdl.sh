@@ -1,8 +1,7 @@
 #!/bin/bash
-COM=$*
-while :; do
-	 echo hello
-	 $COM
-     # demonstrates taht sleep can accept fractional values
-	 sleep .5
- done 
+FILE=$*
+echo Diff
+git diff $FILE
+echo
+echo Recent changes:
+git log -n 3 --oneline --decorate $FILE
