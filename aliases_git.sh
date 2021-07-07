@@ -8,3 +8,12 @@ alias gitcl='git clean -n'
 # list ignored files. Otere ways of doing this
 alias gitig='git status --short --ignored'
 
+# commit
+   alias gitcp='git commit -p'
+
+function gitchk {
+FILE=$1
+  #TODO Check for file
+  cp $FILE ~/safe/ -v
+  git checkout -p $FILE
+}
