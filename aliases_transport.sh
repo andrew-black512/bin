@@ -1,10 +1,19 @@
 TRANSPORT=/home/andrew/dev/trainsstable
 
 function busrep {
+  echo Legacy ..... get rid of busexp
 STOP=$1
   echo $STOP
   for I in {1..20} ;do
     $TRANSPORT/busexp.rb $STOP
+    sleep 30
+  done
+}
+function lived {
+  STOP=$*
+  echo $STOP
+  for I in {1..20} ;do
+    $TRANSPORT/livedep.rb t $STOP
     sleep 30
   done
 }
