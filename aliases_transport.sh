@@ -19,3 +19,9 @@ function lived {
 }
 alias stop_g='busrep 490007299G'
 alias stop_h='busrep 490007299H'
+
+alias tmpw='~/dev/trains/tmp_tuh.sh'
+
+#TODO
+alias tt='$TRANSPORT/train_times.rb'
+alias ttw='/home/andrew/dev/trains/train_times.rb'
