@@ -19,9 +19,12 @@ alias git.ig='git status --short --ignored'
 
 # This is a dangerous command to have in command histroy.
 # TODO - put a check in first.
-function gitchk {
+function git.chk {
 FILE=$1
-  #TODO Check for file
+  #TODO Check for only one file (or few files)
   cp $FILE ~/safe/ -v
   git checkout -p $FILE
 }
+
+#vaguelly related
+  alias chmod.x='chmod a+x -v'
