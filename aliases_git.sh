@@ -6,11 +6,14 @@
 #  Common ones - no punct
 #  others have a . (to avoid confusing with  eg git-receive-pack)
 
+# Status things
 alias gits='git  status '
 # try followimg fpr a bit
 alias git.s='gits  --short --untracked=no'
-alias gitl='echo ;git log --oneline --decorate --graph'
 
+# Log type things
+alias gitl='echo ;git log --oneline --decorate --graph'
+alias git.recent='git log --oneline -n3'
 alias git.cl='git clean -n'
 
 # list ignored files. Otere ways of doing this
