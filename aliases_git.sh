@@ -20,7 +20,7 @@ alias git.cl='git clean -n'
 alias git.ig='git status --short --ignored'
 
 # commit (-p selects hunks, -v puts diff into editor, -u no : dont display untracked)
-   alias gitcp='git commit -p -v -uno'
+   alias gitcp='git commit -p -v -uno ;git.recent'
 
 alias gith='git help'
 
