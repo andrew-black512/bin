@@ -7,6 +7,8 @@
 #  others have a . (to avoid confusing with  eg git-receive-pack)
 
 alias gits='git  status '
+# try followimg fpr a bit
+alias git.s='gits  --short --untracked=no'
 alias gitl='echo ;git log --oneline --decorate --graph'
 
 alias git.cl='git clean -n'
@@ -14,8 +16,10 @@ alias git.cl='git clean -n'
 # list ignored files. Otere ways of doing this
 alias git.ig='git status --short --ignored'
 
-# commit (-p selects huns, -v puts diff into editor, -u no : dont display untracked)
+# commit (-p selects hunks, -v puts diff into editor, -u no : dont display untracked)
    alias gitcp='git commit -p -v -uno'
+
+alias gith='git help'
 
 # This is a dangerous command to have in command histroy.
 # TODO - put a check in first.
