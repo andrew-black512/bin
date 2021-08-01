@@ -6,6 +6,10 @@
 #  Common ones - no punct
 #  others have a . (to avoid confusing with  eg git-receive-pack)
 
+# TODO-ADD
+## git branch --merged master ;echo unmerged:; git branch --no-merged master
+
+
 # Status things
 alias gits='git  status '
 # try followimg fpr a bit
