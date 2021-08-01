@@ -1,4 +1,6 @@
 #!/usr/bin/ruby
+#TODO - try $?.success?
+#  https://stackoverflow.com/questions/18728069/ruby-system-command-check-exit-code
 
 out = []
 branch =`git symbolic-ref --short HEAD`
