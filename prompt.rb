@@ -1,14 +1,12 @@
 #!/usr/bin/ruby
-require 'colorize'
-#TODO - try $?.success?
-#  https://stackoverflow.com/questions/18728069/ruby-system-command-check-exit-code
+require 'colorize' # causes problems with prompt...
 
 # semi config
 branch_special = { 'master' => 1, 'develop'=>1}
 # Main
 
 out = []
-branch =`git branch`
+branch =`git symbolic-ref --short HEAD`
 if $?.success?
   branch.sub! '* ',''
   branch.chomp!
