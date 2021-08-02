@@ -6,13 +6,13 @@ branch_special = { 'master' => 1, 'develop'=>1}
 # Main
 
 out = []
-branch =`git symbolic-ref --short HEAD`
+branch =`git symbolic-ref --short HEAD 2>/dev/null`
 if $?.success?
   branch.sub! '* ',''
   branch.chomp!
   branch = branch.upcase if branch_special[branch]
 else
-  branch = 'no git'
+  branch = 'no-git'
 end
 
 out.push  branch
