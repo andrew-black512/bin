@@ -1,21 +1,21 @@
 #!/bin/bash
 
+## Backs up atom config files (unclear if can be in a local .git)
+## cloned from ~/bin/bu.sh
 
 
 function cx {
-  FILE=$1 
+  FILE=$1
   echo ---------- $FILE
-  cp -v -t ~/backups $FILE
-  pushd ~/backups
+  cp -v -t ~/backups_d/atom $FILE
+  pushd ~/backups_d/atom
   git commit $FILE -m"update $FILE"
-  popd 
+  popd
 }
 
-cd ~
-cx add_alias
-cx .gitconfig
-cx .bash_aliases
-cx .bookmarks.data
+cd ~/.atom
 
+cx config.cson
 
-
+cx keymap.cson
+cx styles.less
