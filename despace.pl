@@ -6,8 +6,10 @@ foreach my $filename (@ARGV) {
   
   # multiple punctuation to one
     $newfilename =~ s/ \s+ ([-]) \s+/$1/gx ;
-  # Multiple spaces and (
-  $newfilename =~ s/ ( \s \( )+ /_/gx ;
+
+  # Multiple spaces and ( to _
+  $newfilename =~ s/ [\s(]+ /_/gx ;
+
   # Multiple  ) to nothing
   $newfilename =~ s/  \)+ //gx ;
 
