@@ -1,1 +1,1 @@
-chromium-browser --app=https://messages.google.com/web/
+chromium-browser --app=https://messages.google.com/web/ &
