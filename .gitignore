@@ -1,13 +1,21 @@
-abc2ly,
-convert-ly,
-etf2ly,
-lilypond 
-midi2ly,
-mup2ly,
-musicxml2ly,
-uninstall-lilypond 
-lilypond 
+abc2ly
+convert-ly
+etf2ly
+lilypond
+midi2ly
+mup2ly
+musicxml2ly
+uninstall-lilypond
+lilypond
 lilypond-book
 lilypond-invoke-editor
 lilypond-wrapper.guile
 lilypond-wrapper.python
+
+#backups to sort
+bu_lully.sh
+buusb
+buusb_work
+
+# added by command line
+man_output/
