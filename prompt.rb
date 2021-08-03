@@ -1,6 +1,8 @@
 #!/usr/bin/ruby
 require '/home/andrew/exp/ruby/color.rb' # causes problems with prompt...
 
+# TODO: reformat int better defined functions
+
 def prompt_wd
   # Print last two directories pwd
   dirs = Dir.pwd.split '/'
