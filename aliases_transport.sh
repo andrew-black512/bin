@@ -17,6 +17,17 @@ function lived {
     sleep 30
   done
 }
+function rep {
+  COMMAND=$*
+  echo $COMMAND
+  for I in {1..20} ;do
+    $COMMAND
+    sleep 30
+  done
+}
+alias tr.wim='rep spec/edw_wim.sh'
+
+
 alias stop_g='busrep 490007299G'
 alias stop_h='busrep 490007299H'
 
