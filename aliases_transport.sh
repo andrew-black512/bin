@@ -1,4 +1,4 @@
-TRANSPORT=/home/andrew/dev/trainsstable
+export TRANSPORT=/home/andrew/dev/trainsstable
 
 function busrep {
   echo Legacy ..... get rid of busexp
