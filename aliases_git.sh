@@ -24,7 +24,10 @@ alias git.cl='git clean -n'
 alias git.ig='git status --short --ignored'
 
 # commit (-p selects hunks, -v puts diff into editor, -u no : dont display untracked)
-   alias gitcp='git commit -p -v -uno ;echo ;git.recent'
+#TODO-Q  consider a git log one (to get full comment)
+#  ';echo ;git.recent' didnt work as it messed up param passing. Wait until I write a ruby version
+
+   alias gitcp='git commit -p -v -uno'
 
 alias gith='git help'
 
