@@ -1,5 +1,8 @@
 export TRANSPORT=/home/andrew/dev/trainsstable
 
+alias ttweb='/home/andrew/dev/trains/ttweb.rb'
+alias statf='~/dev/trains/station_finder.rb'
+
 function busrep {
   echo Legacy ..... get rid of busexp
 STOP=$1
