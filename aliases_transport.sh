@@ -33,8 +33,9 @@ alias tr.wim='rep spec/edw_wim.sh'
 
 alias stop_g='busrep 490007299G'
 alias stop_h='busrep 490007299H'
+alias stop_bbb='busrep 490006526A'
 
-alias tmpw='~/dev/trains/tmp_tuh.sh'
+alias tmpw='~/dev/trains/spec/edw_wim.sh' # |less'
 
 #TODO
 alias tt='$TRANSPORT/train_times.rb'
