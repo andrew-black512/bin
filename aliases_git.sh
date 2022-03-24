@@ -39,6 +39,9 @@ FILE=$1
   cp $FILE ~/safe/ -v
   git checkout -p $FILE
 }
+alias git.empt='git commit --allow-empty --allow-empty-message -m ""'
+alias git.showconflict="ack '>>>|===|<<<' --color -C10| less -r "
+
 
 #vaguelly related
   alias chmod.x='chmod a+x -v'
