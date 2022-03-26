@@ -45,3 +45,20 @@ alias git.showconflict="ack '>>>|===|<<<' --color -C10| less -r "
 
 #vaguelly related
   alias chmod.x='chmod a+x -v'
+
+#----------------------------------------------------------------------
+# Shows branches with descriptions
+function git.br() {
+  current=$(git rev-parse --abbrev-ref HEAD)
+  branches=$(git for-each-ref --format='%(refname)' refs/heads/ | sed 's|refs/heads/||')
+  for branch in $branches; do
+    desc=$(git config branch.$branch.description)
+    if [ $branch == $current ]; then
+      branch="* \033[0;32m$branch\033[0m"
+     else
+       branch="  $branch"
+     fi
+     echo -e "$branch      \033[0;36m$desc\033[0m"
+  done
+}
+## https://stackoverflow.com/questions/2108405/branch-descriptions-in-git
