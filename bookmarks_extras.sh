@@ -1,5 +1,8 @@
+# $0 doesnt work in this context ;-(
+THISFILE=$(readlink -f ~/bin/bookmarks_extras.sh)
+
 alias br='bookmarks -r bash'
-alias bh='bookmarks |less'
+alias bh="(bookmarks;cat $THISFILE) |less"
 alias pd='pushd'
 
 # looks for bookmarks for current directory (or subdirectory)
