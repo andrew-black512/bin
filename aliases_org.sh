@@ -1,4 +1,5 @@
+## Organsation related aliases
 # Hint related
-   HINT=~/work/dist/ref/hints
+   HINT=~/work/ref/hints
    alias hinta='dist hint'
-   alias hint="ack $HINT --match"    #regexp
+   alias hint="ack -i $HINT --match"    #regexp
