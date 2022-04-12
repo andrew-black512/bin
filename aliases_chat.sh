@@ -1,4 +1,10 @@
-/home/andrew/.bash_aliases
-62:    export CALM=~/work/calm
-116:alias calm='perl  /home/andrew/wd/perllib/calm.pl'
-117:alias calmu='perl -ibak/*.bak /home/andrew/wd/perllib/calm.pl'
+# Chat related thinst including calm
+export CALM=~/work/calm
+alias chat=/home/andrew/wd/perllib/chat_emul.pl
+
+
+# Calm
+  #TODO rename ths file...
+  calmprocess=~/dev/tools/calm.pl
+  alias calm='perl  /home/andrew/wd/perllib/calm.pl'
+  alias calmu="perl -ibak/*.bak $calmprocess"
