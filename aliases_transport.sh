@@ -40,3 +40,8 @@ alias tmpw='~/dev/trains/spec/edw_wim.sh' # |less'
 #TODO
 alias tt='$TRANSPORT/train_times.rb'
 alias ttw='/home/andrew/dev/trains/train_times.rb'
+
+# specific lived
+  alias live.edw="lived edw:lbg"
+  alias live.edwo="lived edw:tuh"
+  alias live.lbg.edw="lived lbg:edw"
