@@ -68,8 +68,9 @@ while (<>) {
    }
    next if $text =~ s/^\s*$//x ; #only blank
 
-
-    if ( $text =~ s/^\s+// ) {
+   if ( $text =~ s/^=\s*// ) {   # "=" is simple verions of heading
+     say box_simp ( '**', $text )
+   } elsif ( $text =~ s/^\s+// ) {    # indented => italics
 	   $text = box_simp( '*', $text ) ;
 	   say $text ;
 	} else {
