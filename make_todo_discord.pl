@@ -6,6 +6,10 @@
 
 =head1 SYNOPSIS
 
+Cloned from make_aadd for discord (simplified markdown)
+Unlikely that I want to support both
+Job is easier outputing to markdown subset rather than BB [ ] stuff
+
 =head1 DESCRIPTION
 
 =head1 TO DO
@@ -37,6 +41,12 @@ sub box {
     return "[$code]$text\[/$code]" ;
 }
 #------------------------------------
+sub box_simp {
+    my $code = shift ;
+    my $text = shift ;
+    return "$code$text$code" ;
+}
+#------------------------------------
 sub start_list {
     say '[ul type="disc"]'
 }
@@ -44,22 +54,23 @@ sub end_list {
     say '[/ul]'
 }
 #------------------------------------
-start_list() ;
+# TODO - add
+#   "=" ->  Bold
+#   "#" -> suppress (internal comment)
+
 while (<>) {
 	chomp ;
 	my $text = $_ ;
     if ( $text =~ s/\#d// ) {
-	   $text = box( 's', $text ) ;  #subscript
-	}
+	   $text = box_simp( '~~', $text ) ;  #strike
+   }
+   #next if $text =~ s/^\s* #//x ; #only comments
+
 
     if ( $text =~ s/^\s+// ) {
-	   $text = box( 'i', $text ) ;
+	   $text = box_simp( '*', $text ) ;
 	   say $text ;
 	} else {
-        say '  ' . box( 'li', $text ) ;
+        say ' - ' . $text  ;
     }
 }
-end_list() ;
-
-
-
