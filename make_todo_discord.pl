@@ -61,10 +61,12 @@ sub end_list {
 while (<>) {
 	chomp ;
 	my $text = $_ ;
-    if ( $text =~ s/\#d// ) {
+    # remove comments
+    $text =~ s/#.*// ;
+    if ( $text =~ s/\*d// ) {
 	   $text = box_simp( '~~', $text ) ;  #strike
    }
-   #next if $text =~ s/^\s* #//x ; #only comments
+   next if $text =~ s/^\s*$//x ; #only blank
 
 
     if ( $text =~ s/^\s+// ) {
