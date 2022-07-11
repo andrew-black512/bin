@@ -35,6 +35,10 @@ alias stop_g='busrep 490007299G'
 alias stop_h='busrep 490007299H'
 alias stop_bbb='busrep 490006526A'
 
+
+alias stop_cat='busrep 40004410084A'
+alias stop_catv='busrep 40004410224A'
+
 alias tmpw='~/dev/trains/spec/edw_wim.sh' # |less'
 
 #TODO
