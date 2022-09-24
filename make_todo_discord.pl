@@ -45,12 +45,16 @@ sub mysay {
 }
 #------------------------------------
 sub box {
+    # this does simplified from 
+    #  bb : [code] xxx [/code] 
+    
     my $code = shift ;
     my $text = shift ;
     return "[$code]$text\[/$code]" ;
 }
 #------------------------------------
 sub box_simp {
+    #  md : code xxx code (eg code = ~~ )
     my $code = shift ;
     my $text = shift ;
     return "$code$text$code" ;
