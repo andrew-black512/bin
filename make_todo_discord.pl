@@ -35,6 +35,15 @@ use warnings ;
 use feature ":5.10" ;
 use Data::Dumper ;
 
+
+#------------------------------------
+# Output library (not used yet)
+our $collect_string = '' ;
+sub mysay {
+    my $data = shift ;
+    $collect_string .= $data ;
+}
+#------------------------------------
 sub box {
     my $code = shift ;
     my $text = shift ;
