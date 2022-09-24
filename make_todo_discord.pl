@@ -75,10 +75,10 @@ while (<>) {
 	chomp ;
 	my $text = $_ ;
     # remove comments
-    $text =~ s/#.*// ;
-    if ( $text =~ s/\*d// ) {
+    if ( $text =~ s/\#d// ) {
 	   $text = box_simp( '~~', $text ) ;  #strike
    }
+   $text =~ s/#.*// ;
    next if $text =~ s/^\s*$//x ; #only blank
 
    if ( $text =~ s/^=\s*// ) {   # "=" is simple verions of heading
