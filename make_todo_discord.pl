@@ -15,17 +15,6 @@ Job is easier outputing to markdown subset rather than BB [ ] stuff
 =head1 TO DO
 
 =head1 SAMPLE OUTPUT
-[ul type="disc"][li]Get list of music for concert and put in order.[/li][li]Practice VW[/li][li]Practice Elgar
-
-[/li][li]Clean one side of kitchen properly (bin/recycle crap)
-[/li][li]Unpack food[/li][li]Get something ready for dinner[/li][li]Pay bill[/li][/ul][i]
-
-[/i]
-
-[b]Dont do list[/b]
-[i]Really easy to find slightly more interesting deflection activities....,[/i]
-
-[ul type="disc"][li]mending clothes. Can wait[/li][li]cycle routes[/li][/ul]
 
 
 =cut
