@@ -32,9 +32,12 @@ sub mysay {
     my $data = shift ;
     $collect_string .= $data ;
 }
+sub myflush {
+    say $collect_string ;
+    $collect_string = '' ;
+}
 #------------------------------------
 sub box {
-    # this does simplified from 
     #  bb : [code] xxx [/code] 
     
     my $code = shift ;
@@ -71,11 +74,14 @@ while (<>) {
    next if $text =~ s/^\s*$//x ; #only blank
 
    if ( $text =~ s/^=\s*// ) {   # "=" is simple verions of heading
-     say box_simp ( '**', $text )
+     myflush ;
+     mysay box_simp ( '**', $text )
    } elsif ( $text =~ s/^\s+// ) {    # indented => italics
 	   $text = box_simp( '*', $text ) ;
-	   say $text ;
+	   mysay( $text) ;
 	} else {
-        say ' - ' . $text  ;
+        myflush ;
+        mysay " - $text "  ;
     }
 }
+myflush
