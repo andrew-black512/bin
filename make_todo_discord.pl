@@ -32,14 +32,20 @@ sub mysay {
     my $data = shift ;
     $collect_string .= $data ;
 }
-sub myflush {
-    say $collect_string ;
+sub mynewline {
+    $collect_string .= "\n" ;
+}
+sub mypurge {
+    print $collect_string ;
+}
+sub mydiscard {
     $collect_string = '' ;
+    ###print "COLLECT $collect_string ENDCOL\n" ;
 }
 #------------------------------------
 sub box {
-    #  bb : [code] xxx [/code] 
-    
+    #  bb : [code] xxx [/code]
+
     my $code = shift ;
     my $text = shift ;
     return "[$code]$text\[/$code]" ;
@@ -72,16 +78,21 @@ while (<>) {
    }
    $text =~ s/#.*// ;
    next if $text =~ s/^\s*$//x ; #only blank
+   if ( $text =~ /^--\s*(\w*)/ ) {
+      ###say STDERR "discard \n" ;
+      mydiscard ;
+      next ;
+   }
 
    if ( $text =~ s/^=\s*// ) {   # "=" is simple verions of heading
-     myflush ;
+     mynewline ;
      mysay box_simp ( '**', $text )
    } elsif ( $text =~ s/^\s+// ) {    # indented => italics
 	   $text = box_simp( '*', $text ) ;
 	   mysay( $text) ;
 	} else {
-        myflush ;
+        mynewline ;
         mysay " - $text "  ;
     }
 }
-myflush
+mypurge
