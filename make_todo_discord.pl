@@ -37,6 +37,8 @@ sub mynewline {
 }
 sub mypurge {
     print $collect_string ;
+    say '' ;
+    say '' ;
 }
 sub mydiscard {
     $collect_string = '' ;
