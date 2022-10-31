@@ -1,8 +1,13 @@
 export TRANSPORT=/home/andrew/dev/trainsstable
+export TRANSPORTW=/home/andrew/dev/trains/
+export RUBY=/home/andrew/exp/ruby
 
 alias ttweb='/home/andrew/dev/trains/ttweb.rb'
 alias statf='~/dev/trains/station_finder.rb'
 
+function ttc {
+  $TRANSPORTW/train_times.rb  $* |  $RUBY/file2color.rb $TRANSPORTW/traincolors.csv
+}
 function busrep {
   echo Legacy ..... get rid of busexp
 STOP=$1
