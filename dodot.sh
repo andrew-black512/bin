@@ -6,7 +6,6 @@
 FILEBASE=`basename $1 .dot`
 PDF=out/${FILEBASE}.pdf
 
-   dot ${FILEBASE}.dot -Tpdf > ${PDF}
-   #TODO handle error - dont open.
-
-   gnome-open ${PDF}
+   if dot ${FILEBASE}.dot -Tpdf > ${PDF} ;then
+      gnome-open ${PDF}
+   fi
