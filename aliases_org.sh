@@ -9,3 +9,5 @@
 
 #dist related
    alias disttree='tree -d $DIST'
+
+   alias flist='touch 000_FILELIST'
