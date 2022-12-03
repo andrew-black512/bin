@@ -2,11 +2,14 @@ echo bash alias with cdd + extras + up + mvs xclip mustools
 function clipd() {
 OFFSET=$1
 echo -n $(date.py $OFFSET) | xclip -i -selection clipboard
+  echo clip : $( xclip -o -selection clipboard)
+
 }
 
 function clipf() {
-  FILE=$1
-  readlink ./$FILE -f | xclip -i -selection clipboard
+FILE=$1
+FULLFILE=$(readlink ./$FILE -f ) 
+  echo -n $FULLFILE | xclip -i -selection clipboard
   echo clip : $( xclip -o -selection clipboard)
 
 }
