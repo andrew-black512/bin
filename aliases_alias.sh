@@ -2,6 +2,14 @@
 alias falias='alias|grep'
 BIN=~/bin/
 function aliashelp {
-   less $BIN/aliases_$1.sh
+PAR=$1
+if [ -z "$PAR" ]
+then
+      cd $BIN
+      ls $BIN/aliases_*.sh
+else
+      less $BIN/aliases_$PAR.sh
+fi
+
 
 }
