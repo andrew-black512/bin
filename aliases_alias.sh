@@ -1,14 +1,16 @@
 # finds alias by key or value
 alias falias='alias|grep'
-BIN=~/bin/
+BIN=~/bin
 function aliashelp {
 PAR=$1
-if [ -z "$PAR" ]
+FILE=$BIN/aliases_$PAR.sh
+if [ -f "$FILE" ]
 then
-      cd $BIN
-      ls $BIN/aliases_*.sh
+      less $FILE
 else
-      less $BIN/aliases_$PAR.sh
+      cd $BIN
+      pwd
+      ls aliases_*.sh
 fi
 
 
