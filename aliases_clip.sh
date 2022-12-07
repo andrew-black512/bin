@@ -14,6 +14,8 @@ FULLFILE=$(readlink ./$FILE -f )
 
 }
 #  pipe | clip or clip >file>
+
     alias clip='xclip -i -selection clipboard'
+    alias clipv='xclip -i -f-selection clipboard'
     alias clips='xclip -o -selection clipboard'
     alias clipl='xclip -o -selection clipboard | less'
