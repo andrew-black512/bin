@@ -42,6 +42,12 @@ FILE=$1
 alias git.empt='git commit --allow-empty --allow-empty-message -m ""'
 alias git.showconflict="ack '>>>|===|<<<' --color -C10| less -r "
 
+function git.sel {
+PERLLIB=/home/andrew/wd/perllib
+  perl -I $PERLLIB/lib $PERLLIB/bzr_sel_commit.pl
+
+}
+
 
 #vaguelly related
   alias chmod.x='chmod a+x -v'
