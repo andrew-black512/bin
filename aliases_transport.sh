@@ -17,13 +17,11 @@ STOP=$1
     sleep 30
   done
 }
+# no longer does loop (use rep instead)
 function lived {
   STOP=$*
   echo $STOP
-  for I in {1..20} ;do
-    $TRANSPORT/livedep.rb t $STOP
-    sleep 30
-  done
+  $TRANSPORT/livedep.rb t $STOP
 }
 function rep {
   COMMAND=$*
