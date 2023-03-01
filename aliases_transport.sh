@@ -31,8 +31,6 @@ function rep {
     sleep 30
   done
 }
-alias tr.wim='rep spec/edw_wim.sh'
-
 
 alias stop_g='busrep 490007299G'
 alias stop_h='busrep 490007299H'
@@ -46,9 +44,15 @@ alias tmpw='~/dev/trains/spec/edw_wim.sh' # |less'
 
 #TODO
 alias tt='$TRANSPORT/train_times.rb'
+# Workround when format=d (default) giving quota
+alias ttl='$TRANSPORT/train_times.rb --format=l'
 alias ttw='/home/andrew/dev/trains/train_times.rb'
 
 # specific lived
   alias live.edw="lived edw:lbg"
   alias live.edwo="lived edw:tuh"
   alias live.lbg.edw="lived lbg:edw"
+  alias live.wimr=" lived wim:Ray | ack 19:40 -C10"
+
+  ## TODO what is this
+  alias tr.wim='rep spec/edw_wim.sh'
