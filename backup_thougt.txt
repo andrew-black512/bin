@@ -1,0 +1,120 @@
+List of files
+   buatom.sh
+   bu_lully.sh
+   bu.sh
+   buusb
+   buusb_parm   
+   buusb_work
+
+
+
+
+ 
+buatom.sh
+     #!/bin/bash
+     
+     ## Backs up atom config files (unclear if can be in a local .git)
+     ## cloned from ~/bin/bu.sh
+     
+     
+ .... 
+
+bu_lully.sh
+     #TODO ignore edit backups
+     for SUBDIR in newwork dev
+     do
+         echo $SUBDIR
+         rsync 192.168.1.14:$SUBDIR --delete -av /home/andrew/mirrors/lully
+     done
+
+bu.sh
+     #!/bin/bash
+     
+     
+     
+     function cx {
+       FILE=$1 
+ .... 
+
+buusb
+     rsync /home/andrew/work/music/lily /media/andrew/9A55-2041/tallisbu -va
+
+buusb_parm
+     SUB=$1   # eg work/cbt (assume ~/ )
+     DRIVE=seagate2019  # or 9A55-2041
+     DEST=$(dirname /media/andrew/$DRIVE/tallisbu/$SUB)
+     #mkdir -p $DEST
+     rsync ~/$SUB  $DEST  -va
+     tree -d -n $DEST
+ .... 
+
+buusb_work
+     SUB=Aud_projects  #work/dev #/cbt
+     DEST=/media/andrew/seagate2019/tallisbu_20_08/$SUB
+     #mkdir -p $DEST
+     rsync ~/$SUB  $DEST/$SUB  -va
+     #tree -d $DEST
+
+$VAR1 = [
+          'buatom.sh',
+          'bu_lully.sh',
+          'bu.sh',
+          'buusb',
+          'buusb_parm',
+          'buusb_work'
+        ];
+List of files
+   buatom.sh
+   bu_lully.sh
+   bu.sh
+   buusb
+   buusb_parm
+   buusb_work
+
+
+buatom.sh
+     #!/bin/bash
+     
+     ## Backs up atom config files (unclear if can be in a local .git)
+     ## cloned from ~/bin/bu.sh
+     
+     
+ .... 
+
+bu_lully.sh
+     #TODO ignore edit backups
+     for SUBDIR in newwork dev
+     do
+         echo $SUBDIR
+         rsync 192.168.1.14:$SUBDIR --delete -av /home/andrew/mirrors/lully
+     done
+
+bu.sh
+     #!/bin/bash
+     
+     
+     
+     function cx {
+       FILE=$1 
+ .... 
+
+buusb
+     rsync /home/andrew/work/music/lily /media/andrew/9A55-2041/tallisbu -va
+
+buusb_parm
+     SUB=$1   # eg work/cbt (assume ~/ )
+     DRIVE=seagate2019  # or 9A55-2041
+     DEST=$(dirname /media/andrew/$DRIVE/tallisbu/$SUB)
+     #mkdir -p $DEST
+     rsync ~/$SUB  $DEST  -va
+     tree -d -n $DEST
+ .... 
+
+buusb_work
+     
+     SUB=Aud_projects  #work/dev #/cbt
+     DEST=/media/andrew/seagate2019/tallisbu_20_08/$SUB
+     #mkdir -p $DEST
+     rsync ~/$SUB  $DEST/$SUB  -va
+     #tree -d $DEST
+
