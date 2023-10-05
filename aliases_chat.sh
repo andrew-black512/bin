@@ -9,3 +9,14 @@ alias chat=/home/andrew/wd/perllib/chat_emul.pl
   alias calm='perl  /home/andrew/wd/perllib/calm.pl'
   alias calmu="perl -ibak/*.bak $calmprocess"
   alias calmt='ack "^\d\d:\d\d" -m1 --nopager --sort-files '
+
+  function  calmr {
+  #todo - remove calmr.sh which this replaces
+    # get id into paste buffer
+    calmid.sh
+    chrome.pl c  # TODO expand 
+    #g calmc #- TODO alias issue
+    cd /home/andrew/work/calm/23_01
+     
+
+  }
