@@ -18,7 +18,8 @@ function uslist {
 #specific to current disk
 alias udm='umount $USB'
 alias lsflash='ls /media/andrew'
-alias cdflash='cd /media/andrew/*'
+alias cdflash='cd /media/andrew/*'   # TODO more than one
+alias gnoflash='gno /media/andrew/'
 
 function umountme {
 
@@ -46,3 +47,6 @@ function umountfile {
  alias webc="lsusb -s 1:2"
 
  alias findusb='find  /media/andrew/ -mtime -1'
+
+
+ #  gno /media/andrew/
