@@ -6,7 +6,7 @@ alias chat=/home/andrew/wd/perllib/chat_emul.pl
 # Calm
   #TODO rename ths file...
   calmprocess=~/dev/tools/calm.pl
-  alias calm='perl  /home/andrew/wd/perllib/calm.pl'
+  #### alias calm='perl  /home/andrew/wd/perllib/calm.pl'  ## old
   alias calmu="perl -ibak/*.bak $calmprocess"
   alias calmt='ack "^\d\d:\d\d" -m1 --nopager --sort-files '
 
@@ -16,7 +16,7 @@ alias chat=/home/andrew/wd/perllib/chat_emul.pl
     calmid.sh
     chrome.pl c  # TODO expand 
     #g calmc #- TODO alias issue
-    cd /home/andrew/work/calm/23_01
+    cd /home/andrew/work/calm/23_09
      
 
   }

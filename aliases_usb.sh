@@ -32,7 +32,7 @@ function umountme {
    echo trying to unmount $DEV 
    umount $DEV -v
 }
-function umountfile {
+function umountfile {    # doestt work?
 
    # TODO allow a paramer, defaulting to .
 
@@ -49,4 +49,4 @@ function umountfile {
  alias findusb='find  /media/andrew/ -mtime -1'
 
 
- #  gno /media/andrew/
+  alias  gusb='gnome-open /media/andrew/'

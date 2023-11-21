@@ -10,6 +10,8 @@
 #dist related
    alias disttree='tree -d $DIST'
 
+   alias rantv='dist rant -v'
+
    alias flist='touch 000_FILELIST'
 #find a dire
    alias finddir="ack -i ~/work/ref/dirlist --match"    #regexp

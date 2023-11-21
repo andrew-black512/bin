@@ -19,3 +19,12 @@ FULLFILE=$(readlink ./$FILE -f )
     alias clipv='xclip -i -f-selection clipboard'
     alias clips='xclip -o -selection clipboard'
     alias clipl='xclip -o -selection clipboard | less'
+
+
+function setd() {
+FILE=$1
+FULLFILE=$(readlink ./$FILE -f ) 
+DEST=$FULLFILE 
+  echo clDESTip : $DEST
+
+}

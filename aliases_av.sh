@@ -21,5 +21,11 @@
  function ff {
    firefox.pl "$*" &
  }
+# pdf
+ function oku {
+   okular $* &
+ }
+alias nopdf="killall evince;killall okular"
+
 # network
   alias pg="ping     www.google.com -c4"
