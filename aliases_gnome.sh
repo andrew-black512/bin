@@ -1,5 +1,11 @@
-  alias gcpr='gnome-control-center printers &' 
-  alias gcsound='gnome-control-center sound &' 
+  alias gc.pr='gnome-control-center printers &' 
+  alias gc.sound='gnome-control-center sound &' 
+  alias gc.wifi='gnome-control-center wifi &' 
 
-  alias gnoserv="gnome-open ~/work/ref/service/"
+
+# gnome-open / xdg
+
+#   TODO make functions
+  alias xdg="xdg-open"
+  alias xdg.="xdg-open ."
 
