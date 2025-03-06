@@ -7,6 +7,11 @@ alias todo='cat >> $WEEK/todo'
 alias gweek='cd $WEEK;pwd'
 alias gwork='cd $WEEK/work;pwd'
 alias gdraft='cd $WEEK/draft;pwd'
+#TODO - make DRYer
+alias gwork.p='cd $PREV;pwd'
+alias gwork.p='cd $PREV/work;pwd'
+alias gdraft.p='cd $PREV/draft;pwd'
+
 
 alias treecur='tree $WEEK'
 function weekly {
