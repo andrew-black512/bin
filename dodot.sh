@@ -7,5 +7,5 @@ PDF=$OUTDIR/${FILEBASE}.pdf
 #ls $OUTDIR
 
    if dot ${FILEBASE}.dot -Tpdf > ${PDF} ;then
-      gnome-open ${PDF}
+      xdg-open ${PDF}
    fi
