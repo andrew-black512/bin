@@ -23,11 +23,17 @@ alias git.cl='git clean -n'
 # list ignored files. Otere ways of doing this
 alias git.ig='git status --short --ignored'
 
-# commit (-p selects hunks, -v puts diff into editor, -u no : dont display untracked)
 #TODO-Q  consider a git log one (to get full comment)
 #  ';echo ;git.recent' didnt work as it messed up param passing. Wait until I write a ruby version
 
-   alias gitcp='git commit -p -v -uno'
+   alias gitcp='git commit -p -v -uno' 
+   #  -p  (patch) select hunks
+   #   u=no means dont show untracked 
+   #  -v puts the diffs into the template commit message
+   alias gitc='git commit -v -uno' 
+   
+
+   
 
 alias gith='git help'
 
