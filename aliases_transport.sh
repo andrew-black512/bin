@@ -54,6 +54,12 @@ alias ttw='/home/andrew/dev/trains/train_times.rb'
   alias live.lbg.edw="lived lbg:edw"
   alias live.wimr=" lived wim:Ray | ack 19:40 -C10"
 
+  alias live.dmk.bfr="lived dmk:bfr"
+  alias live.dmk.bms="lived dmk:bms"
+  
+  alias live.bms.dmk="lived bms:dmk bms:hnh"
+  
+
   ## TODO what is this
   alias tr.wim='rep spec/edw_wim.sh'
 # busrep  490005875E

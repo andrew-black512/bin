@@ -10,12 +10,6 @@
   alias realias='. $ALIASFILE'
 
 
-
-# Gnome
-  alias gno="gnome-open"
-  alias gno.="gnome-open ."
-
-
 ## File system related
   alias up='cd ..'
   alias mvd='mv -v -t $DEST'

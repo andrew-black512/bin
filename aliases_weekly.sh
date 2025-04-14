@@ -18,6 +18,7 @@ function weekly {
     echo "initalising weekly dir $WEEK"
     mkdir -p $WEEK/draft
     mkdir -p $WEEK/work
+    mkdir -p $WEEK/work/pdf   # for lilypond
     cd $WEEK/work
     git init
     touch test.txt

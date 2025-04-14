@@ -1,3 +1,3 @@
 
-WEEK=/home/andrew/scratch/25w04
-PREV=/home/andrew/scratch/25w03
+WEEK=/home/andrew/scratch/25w12 
+PREV=/home/andrew/scratch/25w11

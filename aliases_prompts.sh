@@ -7,5 +7,5 @@ function prompt_command {
     pwd >> ~/logs/${PPID}_dirhist
 
 }
-export PROMPT_COMMAND=prompt_command
+# export PROMPT_COMMAND=prompt_command
 PS2='........> '

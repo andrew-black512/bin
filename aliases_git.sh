@@ -74,3 +74,21 @@ function git.br() {
   done
 }
 ## https://stackoverflow.com/questions/2108405/branch-descriptions-in-git
+
+
+
+
+# added 
+# Alias (add this to your ~/.bashrc, ~/.zshrc, or similar shell configuration file)
+alias gitroot='git rev-parse --show-prefix'
+
+# Function (add this to your ~/.bashrc, ~/.zshrc, or similar shell configuration file)
+git_relative_path() {
+  local root=$(git rev-parse --show-toplevel 2>/dev/null)
+  if [ $? -ne 0 ]; then
+    echo "Not in a git repository."
+    return 1
+  fi
+  local pwd_relative=$(pwd | sed "s|^$root/||")
+  echo "$pwd_relative"
+}
