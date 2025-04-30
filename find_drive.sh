@@ -1,1 +1,0 @@
-/media/andrew/BLACKUSB/tallisbu
