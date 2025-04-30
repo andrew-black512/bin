@@ -1,1 +1,1 @@
-chromium-browser --app=https://www.metoffice.gov.uk/weather/forecast/gcpvj0v07 &
+google-chrome --app=https://www.metoffice.gov.uk/weather/forecast/gcpvj0v07 &
