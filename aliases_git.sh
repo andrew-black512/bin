@@ -15,6 +15,10 @@ alias gits='git  status '
 # try followimg fpr a bit
 alias git.s='gits  --short --untracked=no'
 
+# man
+  alias git.man="man git"
+  alias git.ls='git ls-files'
+
 # Log type things
 alias gitl='echo ;git log --oneline --decorate --graph'
 alias git.recent='git log --oneline -n3'
@@ -92,3 +96,6 @@ git_relative_path() {
   local pwd_relative=$(pwd | sed "s|^$root/||")
   echo "$pwd_relative"
 }
+
+#TODO move 
+alias gitsum1="python /home/andrew/scratch/25w12/work/git_exp_repos.py | less"
