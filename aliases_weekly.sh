@@ -26,3 +26,7 @@ function weekly {
     git commit -m"add test.txt"
     
 }
+function G {
+  cd $WEEK
+  }
+ 
