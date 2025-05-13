@@ -4,7 +4,7 @@
 alias rant='cat >> $MONTH/rant'
 alias todo='cat >> $MONTH/todo'
 
-alias gweek='cd $MONTH;pwd'
+alias gmonth='cd $MONTH;pwd'
 alias gwork='cd $MONTH/work;pwd'
 alias gdraft='cd $MONTH/draft;pwd'
 #TODO - make DRYer
