@@ -1,25 +1,27 @@
-# WEEK=/home/andrew/scratch/25w03
+# MONTH=/home/andrew/scratch/25w03
 # defined in aliases_auto.sh to make it easier to overide
 
-alias rant='cat >> $WEEK/rant'
-alias todo='cat >> $WEEK/todo'
+alias rant='cat >> $MONTH/rant'
+alias todo='cat >> $MONTH/todo'
 
-alias gweek='cd $WEEK;pwd'
-alias gwork='cd $WEEK/work;pwd'
-alias gdraft='cd $WEEK/draft;pwd'
+alias gweek='cd $MONTH;pwd'
+alias gwork='cd $MONTH/work;pwd'
+alias gdraft='cd $MONTH/draft;pwd'
 #TODO - make DRYer
+
 alias gwork.p='cd $PREV;pwd'
 alias gwork.p='cd $PREV/work;pwd'
 alias gdraft.p='cd $PREV/draft;pwd'
 
 
-alias treecur='tree $WEEK'
+alias treecur='tree $MONTH'
 function weekly {
-    echo "initalising weekly dir $WEEK"
-    mkdir -p $WEEK/draft
-    mkdir -p $WEEK/work
-    mkdir -p $WEEK/work/pdf   # for lilypond
-    cd $WEEK/work
+    set -x
+    echo "initalising monthly dir $MONTH"
+    mkdir -p $MONTH/draft
+    mkdir -p $MONTH/work
+    mkdir -p $MONTH/work/pdf   # for lilypond
+    cd $MONTH/work
     git init
     touch test.txt
     git add test.txt
@@ -27,6 +29,6 @@ function weekly {
     
 }
 function G {
-  cd $WEEK
+  cd $MONTH
   }
  
