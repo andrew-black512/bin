@@ -28,7 +28,9 @@ function weekly {
     git commit -m"add test.txt"
     
 }
+# aims to have param. Is it worth bother.
+# /work is most common destination
 function G {
-  cd $MONTH
+  cd $MONTH/work;pwd
   }
  
