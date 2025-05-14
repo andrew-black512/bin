@@ -18,6 +18,9 @@ alias git.s='gits  --short --untracked=no'
 # man
   alias git.man="man git"
   alias git.ls='git ls-files'
+  alias git.sb='git show-branch --more=10'
+  alias git.rebase='git rebase -i'
+
 
 # Log type things
 alias gitl='echo ;git log --oneline --decorate --graph'
