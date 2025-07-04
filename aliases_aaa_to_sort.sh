@@ -39,6 +39,8 @@ alias treed='tree -d'
     export s=~/scratch/temp/
     alias dist='~/dev/tools/distn.pl'
     alias distn='~/dev/tools/distn.pl'
+    alias pdist='/home/andrew/dev/tools/pdist.py'
+    alias davidf='/home/andrew/dev/tools/pdist.py davidf'
 
 # Android related
   alias emulator='/home/andrew/Android/Sdk/emulator/emulator @Pixel_2_API_R -noaudio &'
