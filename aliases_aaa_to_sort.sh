@@ -37,11 +37,8 @@ alias treed='tree -d'
     export DIST=~/work/dist
     export CALM=~/work/calm
     export s=~/scratch/temp/
-    #TOx`x`DO sort out dist v distn
-    alias dist='~/wd/perllib/distn.pl'
-    alias distn='~/wd/perllib/distn.pl'
-
-
+    alias dist='~/dev/tools/distn.pl'
+    alias distn='~/dev/tools/distn.pl'
 
 # Android related
   alias emulator='/home/andrew/Android/Sdk/emulator/emulator @Pixel_2_API_R -noaudio &'
