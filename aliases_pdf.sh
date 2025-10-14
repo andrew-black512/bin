@@ -7,7 +7,7 @@ function pdfpages {
    done
 
 }
-
+alias doc_grep='/home/andrew/dev/tools/pdftools/doc_grep.py'
 
 # no-git dl_2022/wim $ 
 # pdftk Dec_22_Christmas_concert_Part_2.pdf  cat 3-end output  out.pdf
