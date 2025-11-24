@@ -1,0 +1,7 @@
+#!/bin/sh
+file=`basename $1 .ly`
+echo $file
+lilypond -o pdf/$file "$@"
+echo resp=$!
+sleep .5
+gnome-open pdf/$file.pdf
