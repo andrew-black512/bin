@@ -30,6 +30,7 @@ our $collect_string = '' ;
 sub mysay {
     my $data = shift ;
     $collect_string .= $data ;
+    say "TEST $data" 
 }
 sub mynewline {
     $collect_string .= "\n" ;
@@ -44,26 +45,11 @@ sub mydiscard {
     ###print "COLLECT $collect_string ENDCOL\n" ;
 }
 #------------------------------------
-sub box {
-    #  bb : [code] xxx [/code]
-
-    my $code = shift ;
-    my $text = shift ;
-    return "[$code]$text\[/$code]" ;
-}
-#------------------------------------
 sub box_simp {
     #  md : code xxx code (eg code = ~~ )
     my $code = shift ;
     my $text = shift ;
     return "$code$text$code" ;
-}
-#------------------------------------
-sub start_list {
-    say '[ul type="disc"]'
-}
-sub end_list {
-    say '[/ul]'
 }
 #------------------------------------
 # TODO - add
