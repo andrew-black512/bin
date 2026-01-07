@@ -26,7 +26,6 @@ use Data::Dumper ;
 
 
 #------------------------------------
-# Output library (not used yet)
 our $collect_string = '' ;
 sub mysay {
     my $data = shift ;
@@ -74,7 +73,8 @@ sub end_list {
 while (<>) {
 	chomp ;
 	my $text = $_ ;
-    # remove comments
+    # TDODO remove comments 
+    # #d implies done
     if ( $text =~ s/\#d// ) {
 	   $text = box_simp( '~~', $text ) ;  #strike
    }
