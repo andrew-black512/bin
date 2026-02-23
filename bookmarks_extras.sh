@@ -13,6 +13,12 @@ function dv {
     dirs -v
 }
 
+function b.check {  # check for non existant bookmarks
+  echo TOTO update echo
+  python ~/dev/tools/check_dirs.py /home/andrew/.bookmarks.data 3
+  echo Edit from highest number !!
+}
+
 # looks for bookmarks for current directory (or subdirectory)
 # TODO make function and add param
 alias bf1='grep $(readlink -f ..) ~/.bookmarks.data'
