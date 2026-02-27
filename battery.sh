@@ -11,5 +11,6 @@ function get_battery_info() {
   echo "Percentage: $percentage"
   echo "State: $state"
 }
-
+alias bat_info="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias bat_info_w="watch get_battery_info"
 get_battery_info
