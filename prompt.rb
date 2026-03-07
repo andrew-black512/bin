@@ -12,7 +12,8 @@ def prompt_wd
 end
 
 # semi config
-branch_special = { 'master' => 1, 'develop'=>1}
+branch_special = { 'main'=> 1, 'master' => 1, 'develop'=>1}
+dircolor = :green
 # Main
 
 out = []
@@ -29,7 +30,7 @@ end
 
 out.push  branch
 # todo - change to ~ and truncate...
-out.push prompt_wd.colorize(:green)
+out.push prompt_wd.colorize(dircolor)
 out.push '$ '  # $ reminds me of DCL
 
 print out.join ' '
