@@ -6,9 +6,11 @@
 
 # gnome-open / xdg
 
+
 #   TODO make functions
   alias xdg="xdg-open"
   alias xdg.="xdg-open ."
   alias gno="xdg-open"
   alias gno.="xdg-open ."
 
+  alias gnor="xdg-open  ~/Downloads/ref"
