@@ -1,4 +1,5 @@
 alias backup="~/dev/tuxtools/backups/tallis_adb.sh"
 
-alias sshh="ssh bigtux@hildegard.local"
-
+alias ssh.hildegard="ssh bigtux@hildegard.local"
+alias ssh.bt="ssh bigtux@localhost"
+alias ssh.tallis="ssh tallis.local"
