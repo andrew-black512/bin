@@ -1,22 +1,22 @@
-_paste_email_completions() {
+_paste_station_completions() {
     local cur
     COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-# 1. Temporarily remove the colon from the list of word-break characters
-    local COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+    
+    # This line tells bash-completion to ignore the colon as a word break
+    # so that 'edw:tuh' is treated as one single token.
+    _get_comp_words_by_ref -n : cur
 
     local list_file="$HOME/bin/live.txt"
 
     if [[ -f "$list_file" ]]; then
-        # 1. 'cat' the file
-        # 2. 'cut -d';' -f1' grabs the first column
-        # 3. 'compgen' filters the result based on what you've typed
         local options=$(cat "$list_file")
+        
+        # We use -W to provide the list and let compgen match against $cur
         COMPREPLY=( $(compgen -W "$options" -- "$cur") )
     fi
+    
+    # Crucial: This fix ensures the colon doesn't cause a double-prefix error
+    __ltrim_colon_completions "$cur"
 }
 
-# Register the function to handle 'paste_email.rb'
-
-complete -F _paste_email_completions lived 
-
+complete -F _paste_station_completions lived
