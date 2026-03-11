@@ -3,8 +3,6 @@ _paste_email_completions() {
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
 
-    # Path to your list of completions
-    # Change this to the actual path of your file
     local list_file="$HOME/dev/tools/paste_email.txt"
 
     if [[ -f "$list_file" ]]; then
@@ -17,4 +15,8 @@ _paste_email_completions() {
 }
 
 # Register the function to handle 'paste_email.rb'
+
+alias pe='paste_email.rb'
 complete -F _paste_email_completions paste_email.rb
+complete -F _paste_email_completions pe
+
