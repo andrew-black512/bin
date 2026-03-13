@@ -23,7 +23,7 @@ alias git.s='gits  --short --untracked=no'
 
 
 # Log type things
-alias gitl='echo ;git log --oneline --decorate --graph'
+alias gitl='echo ;git log --name-status --oneline --decorate --graph'
 alias git.recent='git log --oneline -n3'
 alias git.cl='git clean -n'
 
